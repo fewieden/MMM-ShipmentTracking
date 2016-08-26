@@ -3,7 +3,7 @@ Shipment Tracking Module for MagicMirror<sup>2</sup>
 
 ## Example
 
-![](.github/example.jpg)
+| ![](.github/example.jpg) | ![](.github/example2.jpg) |
 
 ## Dependencies
   * An installation of [MagicMirror<sup>2</sup>](https://github.com/MichMich/MagicMirror)
@@ -30,7 +30,8 @@ Shipment Tracking Module for MagicMirror<sup>2</sup>
      ```
 
 ## Available carriers
-  * DHL (tested with german tracking id)
+  * [DHL]() (tested with german tracking id, maybe it's worldwide')
+  * [Landmark]()
 
 ## Config Options
 | **Option** | **Default** | **Description** |
