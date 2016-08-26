@@ -7,15 +7,14 @@
 
 const jsdom = require('jsdom');
 const async = require('async');
-const fs = require('fs');
 const languages = ['de', 'en', 'fr', 'es', 'cs', 'pl', 'nl'];
 const base_url = 'https://nolp.dhl.de/nextt-online-public/set_identcodes.do?';
-const logo = "";
 
 exports.track = (ids, language) => {
     if(languages.indexOf(language) !== -1){
         language = 'en';
-    } var result = {carrier: 'DHL', data: []};
+    }
+    var result = {carrier: 'DHL', data: []};
     return new Promise((resolve, reject) => {
         async.each(ids, (id, callback) => {
             jsdom.env({
@@ -26,9 +25,9 @@ exports.track = (ids, language) => {
                         callback();
                     }
                     var status = window.document.querySelector("#collapseTwo0 table tbody tr:last-child td:last-child");
-                    var date = window.document.querySelector("#collapseTwo0 table tbody tr:last-child td:first-child")
+                    var date = window.document.querySelector("#collapseTwo0 table tbody tr:last-child td:first-child");
                     if(status && date){
-                        status = status.textContent
+                        status = status.textContent;
                         date = date.textContent.slice(-14);
                         result.data.push({
                             id: id,
