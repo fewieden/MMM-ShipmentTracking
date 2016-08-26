@@ -1,0 +1,23 @@
+{
+  "name": "mmm-shipmenttracking",
+  "version": "1.0.0",
+  "description": "Shipment Tracking Module for MagicMirror2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fewieden/MMM-ShipmentTracking.git"
+  },
+  "keywords": [
+    "MagicMirror",
+    "shipment tracking"
+  ],
+  "author": "fewieden",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fewieden/MMM-ShipmentTracking/issues"
+  },
+  "homepage": "https://github.com/fewieden/MMM-ShipmentTracking#readme",
+  "dependencies": {
+    "jsdom": "^9.4.2",
+    "async": "^2.0.1"
+  }
+}
