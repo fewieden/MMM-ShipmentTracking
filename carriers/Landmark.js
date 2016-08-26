@@ -30,6 +30,7 @@ exports.track = (ids, language) => {
                     if(status && date && timezone){
                         status = status.textContent.trim().substring(16);
                         date = date.textContent;
+                        timezone = timezone.textContent;
                         result.data.push({
                             id: id,
                             date: date.substring(0,10) + 'T' + (date.slice(-2) === 'pm' ? ('0' + (12 + parseInt(date.substring(11,13))) + date.substring(13,16)).slice(-5) : date.substring(11,16)) + ':00' + timezone.slice(-6),

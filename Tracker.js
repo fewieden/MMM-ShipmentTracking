@@ -5,7 +5,7 @@
  * MIT Licensed.
  */
 
-const carriers = ['DHL'];
+const carriers = ['DHL', 'Landmark'];
 
 module.exports = () => {
     return {
