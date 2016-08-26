@@ -30,8 +30,8 @@ Shipment Tracking Module for MagicMirror<sup>2</sup>
      ```
 
 ## Available carriers
-  * [DHL]() (tested with german tracking id, maybe it's worldwide')
-  * [Landmark]()
+  * [DHL](dhl.de) (tested with german tracking id, maybe it's worldwide')
+  * [Landmark](landmarkglobal.com)
 
 ## Config Options
 | **Option** | **Default** | **Description** |
