@@ -52,7 +52,7 @@ exports.track = (ids, language) => {
         });
 }, (err) => {
         if( err ) {
-            reject({error: "DHL: Error occurred!"});
+            reject({error: "17track: Error occurred!"});
         }
         resolve(result);
     });
