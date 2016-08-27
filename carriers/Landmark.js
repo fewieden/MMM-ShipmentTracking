@@ -49,7 +49,7 @@ exports.track = (ids, language) => {
             });
         }, (err) => {
             if( err ) {
-                reject({error: "DHL: Error occurred!"});
+                reject({error: "Landmark: Error occurred!"});
             }
             resolve(result);
         });
