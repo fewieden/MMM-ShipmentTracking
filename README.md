@@ -30,7 +30,7 @@ Shipment Tracking Module for MagicMirror<sup>2</sup>
      ```
 
 ## Available carriers
-  * [DHL](http://dhl.de) (tested with german tracking id, maybe it's worldwide')
+  * [DHL](http://dhl.de) (tested with german tracking id, maybe it's worldwide)
   * [Landmark](http://landmarkglobal.com)
 
 ## Config Options
@@ -38,4 +38,4 @@ Shipment Tracking Module for MagicMirror<sup>2</sup>
 | --- | --- | --- |
 | `tracking` | REQUIRED | Object of carriers with array of tracking ids |
 | `format` | `false` | Displays relative date format, for absolute date format provide a string like `'DD:MM HH:mm'` [All Options](http://momentjs.com/docs/#/displaying/format/) |
-| `updateInterval` | `'magic mirror'` | Keyword the mirror starts to listen. |
+| `updateInterval` | `3600000` (1 hour) | Interval new data should be fetched. |
