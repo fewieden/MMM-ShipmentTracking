@@ -23,7 +23,7 @@ module.exports = NodeHelper.create({
 
     track: function(){
         for(var i = 0; i < this.carriers.length; i++){
-            track(this.carriers[i], this.config.tracking[this.carriers[i]])
+            track(this.carriers[i], this.config.tracking[this.carriers[i]], this.config.language)
             .then((result) => {
                 if(result.hasOwnProperty('error')){
                     this.sendSocketNotification("ERROR", result);

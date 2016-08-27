@@ -16,6 +16,8 @@ Module.register("MMM-ShipmentTracking",{
 
     start: function(){
         Log.log(this.name + ' is started!');
+        this.config.language = config.language;
+        moment.locale(config.language);
         this.sendSocketNotification("CONFIG", this.config);
     },
 

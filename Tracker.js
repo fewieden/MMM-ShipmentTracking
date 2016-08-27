@@ -9,11 +9,11 @@ const carriers = ['DHL', 'Landmark'];
 
 module.exports = () => {
     return {
-        track: function(carrier, ids) {
+        track: function(carrier, ids, language) {
             if(carriers.indexOf(carrier) !== -1){
                 var track = require('./carriers/' + carrier + '.js').track;
                 return new Promise((resolve, reject)=>{
-                    track(ids)
+                    track(ids, language)
                     .then((res) => { resolve(res); })
                     .catch((res) => { reject(res); });
                 });
