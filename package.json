@@ -18,6 +18,7 @@
   "homepage": "https://github.com/fewieden/MMM-ShipmentTracking#readme",
   "dependencies": {
     "jsdom": "^9.4.2",
-    "async": "^2.0.1"
+    "async": "^2.0.1",
+    "request": "^2.74.0"
   }
 }

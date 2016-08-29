@@ -53,18 +53,18 @@ Module.register("MMM-ShipmentTracking",{
         table.appendChild(this.createLabelRow());
         var keys = Object.keys(this.tracking);
         if(keys.length) {
-	    for(var n = 0; n < keys.length; n++){
-	        for(var x = 0; x < this.tracking[keys[n]].length; x++){
-	            this.appendData(keys[n], this.tracking[keys[n]][x], table);
-	        }
+	        for(var n = 0; n < keys.length; n++){
+	            for(var x = 0; x < this.tracking[keys[n]].length; x++){
+	                this.appendData(keys[n], this.tracking[keys[n]][x], table);
+	            }
             }
         } else {
             var row = document.createElement("tr");
-	    var status = document.createElement("td");
+	        var status = document.createElement("td");
             status.setAttribute('colspan', 3);
-	    status.innerHTML = this.translate("NO_DATA");
-	    row.appendChild(status);
-	    table.appendChild(row);
+	        status.innerHTML = this.translate("NO_DATA");
+	        row.appendChild(status);
+	        table.appendChild(row);
         }
         wrapper.appendChild(table);
 
