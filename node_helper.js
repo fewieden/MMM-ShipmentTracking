@@ -5,13 +5,15 @@
  * MIT Licensed.
  */
 
-const NodeHelper = require("node_helper");
+/* eslint-env node */
+
+const NodeHelper = require('node_helper');
 const track = require('./Tracker.js')().track;
 
 module.exports = NodeHelper.create({
 
-    socketNotificationReceived: function(notification, payload){
-        if(notification === 'CONFIG'){
+    socketNotificationReceived(notification, payload) {
+        if (notification === 'CONFIG') {
             this.config = payload;
             this.carriers = Object.keys(this.config.tracking);
             this.track();
@@ -21,17 +23,17 @@ module.exports = NodeHelper.create({
         }
     },
 
-    track: function(){
-        for(var i = 0; i < this.carriers.length; i++){
+    track() {
+        for (let i = 0; i < this.carriers.length; i += 1) {
             track(this.carriers[i], this.config.tracking[this.carriers[i]], this.config.language)
             .then((result) => {
-                if(result.hasOwnProperty('error')){
-                    this.sendSocketNotification("ERROR", result);
+                if (Object.prototype.hasOwnProperty.call(result, 'error')) {
+                    this.sendSocketNotification('ERROR', result);
                 } else {
-                    this.sendSocketNotification("DATA", result);
+                    this.sendSocketNotification('DATA', result);
                 }
             }).catch((result) => {
-                this.sendSocketNotification("ERROR", result);
+                this.sendSocketNotification('ERROR', result);
             });
         }
     }
