@@ -15,6 +15,7 @@ Shipment Tracking Module for MagicMirror<sup>2</sup>
 * [request](https://www.npmjs.com/package/request)
 
 ## Installation
+
 1. Clone this repo into `~/MagicMirror/modules` directory.
 1. Run command `npm install --productive` in `~/MagicMirror/modules/MMM-ShipmentTracking` directory, to install all dependencies. This will need a couple of minutes.
 1. Configure your `~/MagicMirror/config/config.js`:
