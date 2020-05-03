@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Shipment Tracking Module for MagicMirror2",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint . && ./node_modules/.bin/stylelint ."
+    "lint": "./node_modules/.bin/eslint . && ./node_modules/.bin/stylelint .",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,8 @@
   "dependencies": {
     "jsdom": "^9.4.2",
     "async": "^2.0.1",
-    "request": "^2.74.0"
-  }
+    "request": "^2.74.0",
+    "snyk": "^1.316.2"
+  },
+  "snyk": true
 }
